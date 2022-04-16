@@ -27,9 +27,9 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
+          const SizedBox(
             width: double.infinity,
-            child: const Card(
+            child: Card(
               color: Colors.blue,
               child: Text('Grafico'),
               elevation: 5,
@@ -38,7 +38,41 @@ class MyHomePage extends StatelessWidget {
           Column(
             children: _transactions.map((tr) {
               return Card(
-                child: Text(tr.title),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.purple,
+                          width: 2,
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        tr.value.toString(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.purple,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          tr.title,
+                        ),
+                        Text(
+                          tr.date.toString(),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               );
             }).toList(),
           ),
