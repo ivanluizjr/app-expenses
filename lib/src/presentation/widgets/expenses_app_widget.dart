@@ -1,4 +1,4 @@
-import 'package:expences/src/presentation/widgets/my_home_page_widget.dart';
+import 'package:expences/src/presentation/views/my_home_page.dart';
 import 'package:flutter/material.dart';
 
 class ExpansesApp extends StatelessWidget {
@@ -6,8 +6,9 @@ class ExpansesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
