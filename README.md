@@ -1,6 +1,6 @@
-# App de Despesas Pessoais
+# :pencil2: App de Despesas Pessoais
 
 Aplicativo de estudo, exercício e idéia de um curso ao qual estou fazendo.
 
-# Em desenvolvimento
+# :triangular_ruler: Em desenvolvimento :triangular_ruler:
 
