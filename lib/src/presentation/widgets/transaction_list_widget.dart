@@ -1,12 +1,14 @@
-import 'package:expences/src/domain/usecase/transaction.dart';
+import 'package:expences/src/domain/entities/transaction_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TransactionListWidget extends StatelessWidget {
-  TransactionListWidget({Key? key, required this.transactions})
-      : super(key: key);
+  final List<TransactionEntity> transactions;
 
-  List<Transaction> transactions;
+  const TransactionListWidget({
+    Key? key,
+    required this.transactions,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

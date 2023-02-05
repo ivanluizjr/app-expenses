@@ -1,3 +1,4 @@
+import 'package:expences/src/core/constants/locales/app_locales.dart';
 import 'package:flutter/material.dart';
 
 class TransactionFormWidget extends StatefulWidget {
@@ -38,7 +39,7 @@ class _TransactionFormWidgetState extends State<TransactionFormWidget> {
               controller: titleController,
               onSubmitted: (_) => _submitForm(),
               decoration: const InputDecoration(
-                labelText: 'Título',
+                labelText: AppLocales.title,
               ),
             ),
             TextField(
@@ -47,16 +48,17 @@ class _TransactionFormWidgetState extends State<TransactionFormWidget> {
                   const TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (_) => _submitForm(),
               decoration: const InputDecoration(
-                labelText: 'Valor (R\$)',
+                labelText: AppLocales.value,
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.purple,
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Colors.purple),
               ),
-              child: const Text('Nova Transação'),
               onPressed: _submitForm,
-            )
+              child: const Text(AppLocales.newTransaction),
+            ),
           ],
         ),
       ),
