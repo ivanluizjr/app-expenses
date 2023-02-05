@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:expences/src/core/constants/locales/app_locales.dart';
 import 'package:expences/src/domain/entities/transaction_entity.dart';
 import 'package:expences/src/presentation/widgets/transaction_form_widget.dart';
 import 'package:expences/src/presentation/widgets/transaction_list_widget.dart';
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Despesas Pessoais'),
+        title: const Text(AppLocales.personalExpenses),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
@@ -72,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               child: Card(
                 color: Colors.blue,
-                child: Text('Grafico'),
+                child: Text(AppLocales.graphic),
                 elevation: 5,
               ),
             ),
